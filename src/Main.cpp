@@ -2,6 +2,7 @@
 #include "Sayi.hpp"
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 using namespace std;
 
 int main(){
@@ -30,7 +31,12 @@ int main(){
         //Oluşturulan Sayi nesnesi, SayilarListesi'ne ekleriz.
         sayilarListesi.ekleSayi(sayi);
 
-        cout << "Sayi: " << sayiDeger << ", Adres: " << &sayilarListesi.baslangic->sayiListesi << endl;
+        //Sayı değerleri ve bellek adresleri ekran çıktısı.
+        cout<<"##########"<<endl;
+        cout <<"#"<< &sayilarListesi.baslangic->sayiListesi << "#" <<endl;
+        cout<<"#--------#"<<endl;
+        cout <<"#"<<setw(8)<< sayiDeger << "#" <<endl;
+        cout<<"##########"<<endl<<endl;
     }
 
     dosya.close();
