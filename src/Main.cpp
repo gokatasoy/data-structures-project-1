@@ -1,4 +1,5 @@
 #include "SayilarListesi.hpp"
+#include "Sayi.hpp"
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -19,22 +20,20 @@ int main(){
         //Yeni bir sayı değeri oluşturulur.
         Sayi sayi;
 
+        int temp = sayiDeger;
         //SayiDeger'in her bir basamağını Sayi nesnesine eklemek için:
-        while (sayiDeger > 0){
-            int basamak = sayiDeger % 10;
+        while (temp > 0){
+            int basamak = temp % 10;
             sayi.ekleBasamak(basamak);
-            sayiDeger /= 10;
+            temp /= 10;
         }
         //Oluşturulan Sayi nesnesi, SayilarListesi'ne ekleriz.
         sayilarListesi.ekleSayi(sayi);
+
+        cout << "Sayi: " << sayiDeger << ", Adres: " << &sayilarListesi.baslangic->sayiListesi << endl;
     }
 
     dosya.close();
 
-    
-    cout<<"Sayilar Listesi: "<<endl;
-    sayilarListesi.yazdir();
-
     return 0;
-
 }

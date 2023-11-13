@@ -1,6 +1,8 @@
 #ifndef SAYI_HPP
 #define SAYI_HPP
 
+#include <iostream>
+
 #include "Basamak.hpp"
 
 class Sayi{
@@ -16,8 +18,6 @@ class Sayi{
 
         //Basamakları yazdıran fonksiyon.
         void yazdir();
-    
 };
-
 
 #endif

@@ -1,6 +1,7 @@
 #ifndef SAYILAR_LISTESI_HPP
 #define SAYILAR_LISTESI_HPP
 
+#include "Sayi.hpp"
 #include "Dugum.hpp"
 
 class SayilarListesi{
@@ -16,6 +17,7 @@ class SayilarListesi{
 
         //SayilarListesi'ndeki tüm Sayi nesnelerini yazdıran fonksiyon.
         void yazdir();
+
 };
 
 #endif

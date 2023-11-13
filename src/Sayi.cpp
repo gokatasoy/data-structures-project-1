@@ -3,6 +3,7 @@
 using namespace std;
 
 Sayi::Sayi(){
+    //Head düğümün başlangıç değerini Null atadık.
     basamakHead = nullptr;
 }
 
@@ -23,7 +24,7 @@ void Sayi::yazdir(){
         //Mevcut basamağın değerini yazdır.
         cout<<current->deger<<" ";
 
-        //Bir sonraki basamağa geç.
+        //Bir sonraki basamağa geç. 
         current = current->sonraki;
     }
     cout<<endl;

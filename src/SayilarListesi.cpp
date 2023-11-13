@@ -29,3 +29,4 @@ void SayilarListesi::yazdir() {
         temp = temp->sonraki;
     }
 }
+
