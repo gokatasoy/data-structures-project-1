@@ -13,6 +13,23 @@ int main(){
         return 1;
     }
 
-    
+    //Dosyadan okunan her sayı değeri:
+    int sayiDeger;
+    while (dosya >> sayiDeger){
+        Sayi sayi;
+        while (sayiDeger > 0){
+            int basamak = sayiDeger % 10;
+            sayi.ekleBasamak(basamak);
+            sayiDeger /= 10;
+        }
+        sayilarListesi.ekleSayi(sayi);
+    }
+
+    dosya.close();
+
+    cout<<"Sayilar Listesi: "<<endl;
+    sayilarListesi.yazdir();
+
+    return 0;
 
 }

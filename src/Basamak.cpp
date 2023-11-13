@@ -1,6 +1,6 @@
 #include "Basamak.hpp"
 
-Basamak::Basamak(int veri){
-    this->veri = veri;
+Basamak::Basamak(int deger){
+    this->deger = deger;
     sonraki = nullptr;
 }

@@ -3,10 +3,10 @@
 
 class Basamak{
     public:
-        Basamak(int veri);
+        Basamak(int deger);
 
         //Sayının basamak değerini tutar.
-        int veri;
+        int deger;
 
         //Sayının bir sonraki basamağının adresini tutar.
         Basamak* sonraki;

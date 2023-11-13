@@ -5,9 +5,13 @@
 
 class Sayi{
     public:
+        Basamak* basamakHead;
+
         Sayi();
-        //Sayının basamaklarının adresini tutan pointer.
-        Basamak* basamaklar;
+        Sayi(int deger);
+
+        void ekleBasamak(int deger);
+        void yazdir();
     
 };
 

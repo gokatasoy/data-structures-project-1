@@ -5,9 +5,13 @@
 
 class SayilarListesi{
     public:
-        SayilarListesi();   
-        
         Dugum* baslangic;
+
+        SayilarListesi(); 
+        ~SayilarListesi(); 
+
+        void ekleSayi(Sayi& sayi);
+        void yazdir();
 };
 
 #endif
