@@ -5,12 +5,16 @@
 
 class SayilarListesi{
     public:
+        //Düğüm sınıfından oluşan bir başlangıç noktası çünkü SayilarListesi bağlı listesi Dugum adlı node'lardan oluşur.
         Dugum* baslangic;
 
         SayilarListesi(); 
         ~SayilarListesi(); 
 
+        //Bir sayı nesnesi ekleyen fonksiyon.
         void ekleSayi(Sayi& sayi);
+
+        //SayilarListesi'ndeki tüm Sayi nesnelerini yazdıran fonksiyon.
         void yazdir();
 };
 

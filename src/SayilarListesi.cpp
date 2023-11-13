@@ -6,6 +6,7 @@ SayilarListesi::SayilarListesi(){
 }
 
 SayilarListesi::~SayilarListesi(){
+    //While döngüsü kullanarak bağlı listeyi dolaşır ve bellek temizliği yaparız. Program durduğundan yıkıcı çağrılır ve bellek temizliği yapılır.
     Dugum* current = baslangic;
     while (current != nullptr){
         Dugum* temp = current->sonraki;
@@ -14,10 +15,11 @@ SayilarListesi::~SayilarListesi(){
 }
 
 void SayilarListesi::ekleSayi(Sayi& sayi){
-        Dugum* yeniDugum = new Dugum(sayi);
-        yeniDugum->sonraki = baslangic;
-        baslangic = yeniDugum;
-        yeniDugum->sayiListesi = sayi;
+    //Yeni bir düğüm nesnesi oluştur ve bağlı listeye ekle.
+    Dugum* yeniDugum = new Dugum(sayi);
+    yeniDugum->sonraki = baslangic;
+    baslangic = yeniDugum;
+    yeniDugum->sayiListesi = sayi;
 }
 
 void SayilarListesi::yazdir() {
