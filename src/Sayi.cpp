@@ -1,5 +1,7 @@
 #include "Sayi.hpp"
 #include <iostream>
+#include <iomanip>
+#include <sstream>
 using namespace std;
 
 Sayi::Sayi(){
@@ -21,8 +23,19 @@ void Sayi::ekleBasamak(int deger){
 void Sayi::yazdir(){
     Basamak* current = basamakHead;
     while (current != nullptr){
+        //Basamğın bellek adresi bir stringe dönüştürülür ve bu stringin son3 karaketir çıktı verilir.
+        int* ptr = &current->deger;
+        stringstream ss;
+        ss << ptr;
+        string addressString = ss.str();
+        string lastThreeCharacters = addressString.substr(addressString.length() - 3);
+
         //Mevcut basamağın değerini yazdır.
-        cout<<current->deger<<" ";
+        cout<< "*******" <<endl;
+        cout<<"*"<<setw(4)<<lastThreeCharacters<< setw(2) << "*" <<endl;
+        cout<< "*******" << endl;
+        cout<< "*" << setw(3) << current->deger << setw(3) << "*" <<endl;
+        cout<< "*******" <<endl<<endl;
 
         //Bir sonraki basamağa geç. 
         current = current->sonraki;

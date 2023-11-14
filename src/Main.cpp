@@ -32,13 +32,14 @@ int main(){
         sayilarListesi.ekleSayi(sayi);
 
         //SAYI DEĞERLERİ VE BELLEK ADRESLERİ EKRAN ÇIKTILARI:
-        cout<<"##########"<< setw(10) << "*******" <<endl;
-        //Sayı adresi
-        cout <<"#"<< &sayilarListesi.baslangic->sayiListesi << "#" << setw(4) << "*" << &sayi.basamakHead->sonraki <<"*" <<endl;
-        cout<<"#--------#"<< setw(10) << "*******" << endl;
-        //Sayi degeri
-        cout <<"#"<<setw(8)<< sayiDeger << "#" << setw(4) << "*" << setw(5) << sayi.basamakHead->deger << "*" <<endl;
-        cout<<"##########" << setw(10) << "*******" <<endl<<endl;
+        cout<<"##########"<<endl;
+        cout<< "#" << &sayilarListesi.baslangic->sayiListesi << "#" <<endl;
+        cout<<"#"<<setw(8)<< sayiDeger << "#" << endl;
+        cout<<"##########" <<endl<<endl;
+
+        sayi.yazdir();
+
+        cout<<endl<<endl;
     }
 
     dosya.close();
