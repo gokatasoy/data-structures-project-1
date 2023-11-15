@@ -1,5 +1,6 @@
 #include "SayilarListesi.hpp"
 #include <iostream>
+using namespace std;
 
 SayilarListesi::SayilarListesi(){
     baslangic = nullptr;
@@ -28,4 +29,47 @@ void SayilarListesi::yazdir() {
         temp->sayiListesi.yazdir();
         temp = temp->sonraki;
     }
+}
+
+void SayilarListesi::enBuyukCikar() {
+    if(baslangic == nullptr){
+        cout << "Liste bos. En buyuk sayi cikartilamaz." << endl;
+        return;
+    }
+
+    // Başlangıç düğümünden başlayarak en büyük sayıyı bulma
+    Dugum* temp = baslangic;
+    Dugum* enBuyukDugum = baslangic;
+    int enBuyukSayi = baslangic->sayiListesi.sayiDegeri();
+
+    while (temp != nullptr) {
+        // Her düğümün temsil ettiği sayının değeri hesaplanır
+        int tempSayiDeger = temp->sayiListesi.sayiDegeri();
+
+        // Eğer bulunan değer, en büyük değerden büyükse güncelle
+        if (tempSayiDeger > enBuyukSayi) {
+            enBuyukSayi = tempSayiDeger;
+            enBuyukDugum = temp;
+        }
+
+        // Bir sonraki düğüme geç.
+        temp = temp->sonraki;
+    }
+
+    // En büyük sayıyı çıkartma
+    if (enBuyukDugum == baslangic) {
+        baslangic = baslangic->sonraki;
+    } else {
+        Dugum* onceki = baslangic;
+        while (onceki->sonraki != enBuyukDugum) {
+            onceki = onceki->sonraki;
+        }
+        onceki->sonraki = enBuyukDugum->sonraki;
+    }
+
+    // En büyük sayıyı ekrana yazdırma
+    cout << endl <<  "En buyuk sayi cikartildi: " << enBuyukSayi << endl << endl;;
+
+    // Bellekten temizleme
+    delete enBuyukDugum;
 }

@@ -64,7 +64,7 @@ int main(){
                 break;
 
             case 3:
-                cout<<"3."<<endl;
+                sayilarListesi.enBuyukCikar();
                 break;
 
             case 4:

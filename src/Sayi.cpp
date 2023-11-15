@@ -77,3 +77,27 @@ void Sayi::yazdir() {
     cout << endl;
 }
 
+int Sayi::sayiDegeri() const {
+    int deger = 0;
+    int basamakKatSayisi = 1;
+
+    // Başlangıç düğümü
+    Basamak* current = basamakHead;
+
+    // Bağlı listedeki her basamak üzerinde dolaşılır
+    while (current != nullptr) {
+        // Her basamağın değeri, onun pozisyonundaki basamakKatSayisi ile çarpılır ve toplama eklenir.
+        deger += current->deger * basamakKatSayisi;
+
+        // Bir sonraki basamağa geç.
+        current = current->sonraki;
+
+        // Basamak kat sayısını artır.
+        basamakKatSayisi *= 10;
+    }
+
+    // Hesaplanan sayı değeri geri döndürülür.
+    return deger;
+}
+
+

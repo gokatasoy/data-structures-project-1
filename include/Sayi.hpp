@@ -18,6 +18,8 @@ class Sayi{
 
         //Basamakları yazdıran fonksiyon.
         void yazdir();
+
+        int sayiDegeri() const;
 };
 
 #endif
