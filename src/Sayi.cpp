@@ -57,9 +57,9 @@ void Sayi::yazdir() {
         // Mevcut basamağın değeri ve bir sonraki basamağın bellek adresini matrise ekleyin
         vector<string> satir;
         satir.push_back("*******");
-        satir.push_back("*  " + to_string(current->deger) + "  *");
-        satir.push_back("*******");
         satir.push_back("* " + lastThreeDigits + " *");
+        satir.push_back("*******");
+        satir.push_back("*  " + to_string(current->deger) + "  *");
         satir.push_back("*******");
         matris.push_back(satir);
 
