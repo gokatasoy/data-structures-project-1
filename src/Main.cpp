@@ -45,5 +45,39 @@ int main(){
 
     dosya.close();
 
+        int secim;
+    do{
+        cout << "MENU:" << endl;
+        cout << "1. Tek Basamaklari Basa Al." <<endl;
+        cout << "2. Basamaklari Tersle." <<endl;
+        cout << "3. En Buyuk Cikar." <<endl;
+        cout << "4. Cikis." ;
+        cin >> secim;
+
+        switch (secim) {
+            case 1:
+                cout<<"1."<<endl;
+                break;
+
+            case 2:
+                cout<<"2."<<endl;
+                break;
+
+            case 3:
+                cout<<"3."<<endl;
+                break;
+
+            case 4:
+                cout<<"Programdan cikis yapiliyor."<<endl;
+                break;
+
+            default:
+                cout << "Gecersiz secim. Lutfen tekrar deneyin."<< endl;
+                break;
+        }
+
+    } while (secim != 4);
+
     return 0;
 }
+
