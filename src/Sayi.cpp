@@ -24,16 +24,12 @@ void Sayi::ekleBasamak(int deger) {
     if (basamakHead == nullptr) {
         basamakHead = yeniBasamak;
     } else {
-        // Bağlı listenin sonuna gidilir.
-        Basamak* current = basamakHead;
-        while (current->sonraki != nullptr) {
-            current = current->sonraki;
-        }
-
-        // Yeni basamak sona eklenir.
-        current->sonraki = yeniBasamak;
+        // Yeni basamağı listenin başına ekle.
+        yeniBasamak->sonraki = basamakHead;
+        basamakHead = yeniBasamak;
     }
 }
+
 
 
 void Sayi::yazdir() {
