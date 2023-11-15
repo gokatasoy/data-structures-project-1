@@ -44,11 +44,11 @@ void Sayi::yazdir() {
 
     while (current != nullptr) {
         // Bir sonraki basamağın bellek adresini alır.
-        int* nextPtr = (current->sonraki != nullptr) ? &current->sonraki->deger : nullptr;
+        // int* nextPtr = (current->sonraki != nullptr) ? &current->sonraki->deger : nullptr;
 
         // Bellek adresini bir stringe çevirir.
         std::stringstream addressStream;
-        addressStream << nextPtr;
+        addressStream << current;
         std::string addressString = addressStream.str();
 
         // Adres stringinin son 3 karakterini alır.
