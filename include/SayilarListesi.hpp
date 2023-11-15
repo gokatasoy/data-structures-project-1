@@ -18,8 +18,11 @@ class SayilarListesi{
         //SayilarListesi'ndeki tüm Sayi nesnelerini yazdıran fonksiyon.
         void yazdir();
 
-        //Menü 3. seçenek. SayilarListesi'ndeki en büyük sayı nesnesini bulur ve listeden çıkartır. Ardında şu sayısı listede çıkartıldı diye bize bir çıktı verir.
+        //Menü 3. seçenek. SayilarListesi'ndeki en büyük sayı nesnesini bulur ve listeden çıkartır. Ardında sayı listede çıkartıldı diye bize bir çıktı verir.
         void enBuyukCikar();
+
+        //Menü 2. seçenek. Sayıların basamak düğümleri reverse edilir.
+        void basamaklariTersCevir();
 
 };
 

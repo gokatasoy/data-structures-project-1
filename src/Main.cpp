@@ -60,7 +60,13 @@ int main(){
                 break;
 
             case 2:
-                cout<<"2."<<endl;
+                // sayilarListesi.basamaklariTersCevir();
+                cout<<endl;
+                cout<<"Sayilarin basamaklari ters cevrildi." <<endl;
+                cout<<"Yeni sayi listesi: " <<endl;
+                sayilarListesi.yazdir() ;
+                cout<<endl;
+                
                 break;
 
             case 3:

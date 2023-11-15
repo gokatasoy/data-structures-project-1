@@ -100,4 +100,18 @@ int Sayi::sayiDegeri() const {
     return deger;
 }
 
+void Sayi::tersCevir(){
+    Basamak* prev = nullptr;
+    Basamak* current = basamakHead;
+    Basamak* next = nullptr;
+
+    while(current != nullptr) {
+        next = current->sonraki;
+        current->sonraki = prev;
+        prev = current;
+        current = next;
+    }
+
+    basamakHead = prev;
+}
 

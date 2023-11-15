@@ -19,7 +19,11 @@ class Sayi{
         //Basamakları yazdıran fonksiyon.
         void yazdir();
 
+        //Sayi değerlerini döndüren fonksiyon.
         int sayiDegeri() const;
+
+        //Sayi değerlerinin basamak düğümlerini ters çevirir.
+        void tersCevir();
 };
 
 #endif

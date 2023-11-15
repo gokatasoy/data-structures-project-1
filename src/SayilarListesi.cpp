@@ -73,3 +73,12 @@ void SayilarListesi::enBuyukCikar() {
     // Bellekten temizleme
     delete enBuyukDugum;
 }
+
+void SayilarListesi::basamaklariTersCevir(){
+    Dugum* temp = baslangic;
+
+    while(temp != nullptr) {
+        temp->sayiListesi.tersCevir();
+        temp = temp->sonraki;
+    }
+}
