@@ -34,7 +34,7 @@ int main(){
         //SAYI DEĞERLERİ VE BELLEK ADRESLERİ EKRAN ÇIKTILARI:
         cout<<"##########"<<endl;
         cout<< "#" << &sayilarListesi.baslangic->sayiListesi << "#" <<endl;
-        cout<<"#--------#"<<endl;
+        cout<<"#--------#"<< "  ===>  " << endl;
         cout<<"#"<<setw(8)<< sayiDeger << "#" << endl;
         cout<<"##########" <<endl<<endl;
 
