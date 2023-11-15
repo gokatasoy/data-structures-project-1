@@ -43,19 +43,23 @@ void Sayi::yazdir() {
     Basamak* current = basamakHead;
 
     while (current != nullptr) {
-        // Basamağın bellek adresi bir stringe dönüştürülür ve bu stringin son 3 karakteri çıktı verilir.
-        int* ptr = &current->deger;
-        stringstream ss;
-        ss << ptr;
-        string addressString = ss.str();
-        string lastThreeCharacters = addressString.substr(addressString.length() - 3);
+        // Bir sonraki basamağın bellek adresini alır.
+        int* nextPtr = (current->sonraki != nullptr) ? &current->sonraki->deger : nullptr;
 
-        // Mevcut basamağın değerini matrise ekleyin
+        // Bellek adresini bir stringe çevirir.
+        std::stringstream addressStream;
+        addressStream << nextPtr;
+        std::string addressString = addressStream.str();
+
+        // Adres stringinin son 3 karakterini alır.
+        std::string lastThreeDigits = (addressString.length() >= 3) ? addressString.substr(addressString.length() - 3) : "000";
+
+        // Mevcut basamağın değeri ve bir sonraki basamağın bellek adresini matrise ekleyin
         vector<string> satir;
         satir.push_back("*******");
         satir.push_back("*  " + to_string(current->deger) + "  *");
         satir.push_back("*******");
-        satir.push_back("* " + lastThreeCharacters + " *");
+        satir.push_back("* " + lastThreeDigits + " *");
         satir.push_back("*******");
         matris.push_back(satir);
 

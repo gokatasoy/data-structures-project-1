@@ -4,6 +4,10 @@
         "ostream": "cpp",
         "fstream": "cpp",
         "iomanip": "cpp",
-        "xstring": "cpp"
-    }
+        "xstring": "cpp",
+        "iosfwd": "cpp",
+        "xmemory": "cpp",
+        "vector": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
